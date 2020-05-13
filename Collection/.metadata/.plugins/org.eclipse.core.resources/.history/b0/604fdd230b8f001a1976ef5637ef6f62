@@ -1,0 +1,36 @@
+package queue;
+
+import java.util.Deque;
+import java.util.concurrent.LinkedBlockingDeque;
+
+public class Dque_prac {
+
+	void display(Deque<Integer> a){
+		for(int element : a){
+			System.out.println("element "+ element);
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Deque<Integer> dque1 = new LinkedBlockingDeque<>();
+		dque1.offer(1);
+		dque1.offer(2);
+		dque1.offer(3);
+		dque1.offer(4);
+		dque1.offer(5);
+		dque1.offer(6);
+		dque1.addFirst(0);
+		
+		Dque_prac a = new Dque_prac();
+		a.display(dque1);
+		System.out.println("Adding to the first element ");
+		a.display(dque1);
+		dque1.removeLast();
+		System.out.println("Removing from last");
+		a.display(dque1);
+	
+
+	}
+
+}

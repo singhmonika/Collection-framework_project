@@ -1,0 +1,51 @@
+package queue;
+
+import java.util.NoSuchElementException;
+import java.util.Queue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class Queue_Exception {
+
+	void display(Queue<Integer> a){
+		for(int element : a){
+			System.out.println("element "+ element );
+		}
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Queue<Integer> queue = new LinkedBlockingQueue<>();
+		try {
+			queue.remove();
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Queue is empty");
+		}
+		 
+		try {
+			queue.element();
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			System.out.println("no element found");
+		}
+		
+		
+		queue.add(1);
+		queue.add(2);
+		queue.add(3);
+		queue.add(4);
+		queue.add(5);
+		queue.add(6);
+		
+		
+		Queue_Exception a = new Queue_Exception();
+		a.display(queue);
+		
+		System.out.println("First element of queue "+ queue.element());
+		System.out.println("Remove First Element " + queue.remove());
+
+	}
+
+}

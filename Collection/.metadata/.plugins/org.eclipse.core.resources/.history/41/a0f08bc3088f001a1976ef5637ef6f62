@@ -1,0 +1,30 @@
+package queue;
+
+import java.util.Queue;
+import java.util.concurrent.ArrayBlockingQueue;
+
+public class Queue_Return {
+
+	void display(Queue<Integer> a){
+		for(int element : a){
+			System.out.println("element "+ element);
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Queue<Integer> queue1 = new ArrayBlockingQueue<>(5);
+		
+			queue1.add(11);
+			queue1.add(22);
+			queue1.add(33);
+			queue1.add(44);
+			queue1.add(55);
+			System.out.println(queue1.offer(66));
+			
+			Queue_Return a = new Queue_Return();
+			a.display(queue1);
+
+	}
+
+}

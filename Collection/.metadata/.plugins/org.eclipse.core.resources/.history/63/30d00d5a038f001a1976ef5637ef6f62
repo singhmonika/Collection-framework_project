@@ -1,0 +1,31 @@
+package queue;
+
+import java.util.Queue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class Queue_prac {
+	void display(Queue<Integer> a){
+		for(int b : a){
+			System.out.println("Element "+ a);
+			
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Queue<Integer> queue = new LinkedBlockingQueue<>();
+		queue.add(1);
+		queue.add(2);
+		queue.add(3);
+		queue.add(4);
+		queue.add(5);
+		queue.add(6);
+		
+		Queue_prac x = new Queue_prac();
+		x.display(queue);
+		
+
+	}
+
+}

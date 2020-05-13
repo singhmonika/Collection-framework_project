@@ -1,0 +1,22 @@
+package queue;
+
+import java.util.Deque;
+import java.util.concurrent.LinkedBlockingDeque;
+
+public class Dque_prac {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Deque<Integer> dque1 = new LinkedBlockingDeque<>();
+		dque1.offer(1);
+		dque1.offer(2);
+		dque1.offer(3);
+		dque1.offer(4);
+		dque1.offer(5);
+		dque1.offer(6);
+		
+
+	}
+
+}
